@@ -3,11 +3,17 @@
 	<head><h1>Garden Monitoring</head></h1>
 	<title>IOT</title>
 	<script src = "redirect.js"></script>
-	<body background = "bgimg.jpg">
+	<body >
 		<h1>Light Settings</h1>
+		
 		<form name = "Light Form" onsubmit="return light()" method="get"> <br>
 		<input type="text"  id="light_status">
 		<input type="submit" value="submit"><br><br><br>
+			
+		<form name = "Motor Form" onsubmit="return motor()" method="get"> <br>
+		<input type="text"  id="motor_status">
+		<input type="submit" value="submit"><br><br><br>
+			
 		<h1>Humidity Status</h1>
 		<iframe width="450" height="250" style="border: 1px solid #cccccc;" src="http://thingspeak.com/channels/256692/charts/1?dynamic=true"></iframe>
 		<h1>Temperature Status </h1>	
