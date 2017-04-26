@@ -42,7 +42,15 @@ function callingfn(){
 	var loc = "https://api.thingspeak.com/update.json?api_key=" + apikey + "&field3=" + status;
 	light(loc);
 }
-
+function threshold(){
+	var thresh = document.getElementById('threshold_status').value;
+	var apikey = "VBANF87J758CB1MA";
+	var loc = "https://api.thingspeak.com/update.json?api_key=" + apikey + "&field4="+thresh;
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", loc, true);
+	xhttp.send();
+	return false;
+}
 function first(){
 	var loc = "https://thingspeak.com/channels/256692/fields/3/last.json";
 	light(loc);

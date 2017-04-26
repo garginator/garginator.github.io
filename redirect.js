@@ -62,3 +62,12 @@ function light1(v){
 	xhttp.send();
 	return false;
 }
+function threshold(){
+	var thresh = document.getElementById('threshold_status').value;
+	var apikey = "VBANF87J758CB1MA";
+	var loc = "https://api.thingspeak.com/update.json?api_key=" + apikey + "&field4="+thresh;
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", loc, true);
+	xhttp.send();
+	return false;
+}
