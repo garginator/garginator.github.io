@@ -1,9 +1,9 @@
 var res;
 var f3;
 function light(v){
-	var apikey = "VBANF87J758CB1MA";
+	var apikey = "T7CY5W2D35NBRVA2";
 	var status = v;
-	var loc = "https://api.thingspeak.com/update.json?api_key=" + apikey + "&field3=" + status;
+	var loc = "https://api.thingspeak.com/update.json?api_key=" + apikey + "&field1=" + status;
 	//window.open("https://api.thingspeak.com/update.json?api_key=" + apikey + "&field3=" + status,'_blank');
 	//$.getJson("https://thingspeak.com/channels/249150.json")
 	//window.location.reload();
@@ -14,7 +14,7 @@ function light(v){
 	       // Typical action to be performed when the document is ready:
 	       res = xhttp.responseText;
 	       var a = JSON.parse(res);
-	       f3 = a.field3;
+	       f3 = a.field1;
 	       if(f3 == 1){
 	       		$('body').addClass("night");
 	       }
@@ -32,10 +32,10 @@ function light(v){
 }
 
 function light1(v){
-	var apikey = "VBANF87J758CB1MA";
+	var apikey = "T7CY5W2D35NBRVA2";
 	var status = v;
 	//var loc = "https://api.thingspeak.com/update.json?api_key=" + apikey + "&field3=" + status;
-	var loc = "https://thingspeak.com/channels/256692/fields/3/last.json";
+	var loc = "https://thingspeak.com/channels/265046/fields/1/last.json";
 	//window.open("https://api.thingspeak.com/update.json?api_key=" + apikey + "&field3=" + status,'_blank');
 	//$.getJson("https://thingspeak.com/channels/249150.json")
 	//window.location.reload();
@@ -46,7 +46,7 @@ function light1(v){
 	       // Typical action to be performed when the document is ready:
 	       res = xhttp.responseText;
 	       var a = JSON.parse(res);
-	       f3 = a.field3;
+	       f3 = a.field1;
 	       if(f3 == 1){
 	       		$('body').addClass("night");
 	       		console.log("yes");
